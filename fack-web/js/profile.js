@@ -7,10 +7,17 @@ const profilrole=document.getElementById('profile-role')
 const LastName=document.querySelector('.info-value')
 const logoutBTN=document.getElementById('logout-btn')
 const ChangePass=document.getElementById('ChangePass')
- 
+const admin=document.getElementById('admin')
+admin.addEventListener('click',()=>{
+    window.location.href='/fack-web/admin.html'
+}) 
 if(user==null){
-        window.location.href='login.html'
+        window.location.href='/fack-web/login.html'
 }
+if(user.role=="user"){
+    admin.style.display='none'
+}
+
 
 window.addEventListener('load',()=>{
     profileName.innerHTML=user.name

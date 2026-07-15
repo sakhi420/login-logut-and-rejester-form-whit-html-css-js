@@ -171,3 +171,38 @@ body {
     transform: scale(0.98);
 }
 
+
+a{
+    all: unset;
+}
+
+#admin {
+    width: 100%;
+    background-color: #ddd9ee; /* قرمز لایت برای حس خروج امن */
+    color: #030e31;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+#admin svg {
+    width: 18px;
+    height: 18px;
+}
+
+#admin:hover {
+    background-color: #befca5;
+    color: #166413;
+}
+
+#admin:active {
+    transform: scale(0.98);
+}

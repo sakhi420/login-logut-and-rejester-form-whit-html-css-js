@@ -9,9 +9,14 @@ loginForm.addEventListener('submit',async (e) => {
     if (usres.length>0) {
         const user = usres[0]
         if(user.password==password){
-            alert('ثبت نام با موفقیت انجام شد')
             localStorage.setItem('user',JSON.stringify(user))
-            window.location.href='/fack-web/profile.html'
+            if(user.role=="admin"){
+                window.location.href='/fack-web/admin.html'
+                alert('ثبت نام با موفقیت انجام شد')
+            }else{
+
+                window.location.href='/fack-web/profile.html'
+            }
         }else{
             alert("ایمیل یا پسورد نادرست است")
         }

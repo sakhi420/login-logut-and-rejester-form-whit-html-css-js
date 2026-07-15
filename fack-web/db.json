@@ -10,27 +10,18 @@
       "id": "1"
     },
     {
-      "name": " Ahmad",
-      "family": "ahmadi",
-      "age": 23,
-      "Email": "ahmad@gmail.com",
-      "password": 54321,
-      "role": "user",
-      "id": "2"
-    },
-    {
       "name": "Nisar",
       "family": "Sakhinejad",
       "age": "23",
       "Email": "sakhinizhad@gmail.com",
       "password": "123",
-      "role": "user",
+      "role": "admin",
       "id": "3"
     },
     {
       "name": "نثار احمد",
       "family": "سخی نژاد",
-      "age": "22",
+      "age": 22,
       "Email": "sakhiNejad@gmail.com",
       "password": "123456",
       "role": "user",
