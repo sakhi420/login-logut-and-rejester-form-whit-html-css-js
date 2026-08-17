@@ -4,6 +4,7 @@ const lastName = document.getElementById('last-name')
 const age = document.getElementById('age')
 const btn =document.getElementById('btn')
 const userContainer= document.querySelector('.userContainer')
+let h1= document.querySelector('h1')
  lucide.createIcons();
 
 btn.addEventListener('click',async (e) => {
@@ -26,7 +27,7 @@ btn.addEventListener('click',async (e) => {
             }
         })
         const user = await res.json()
-        console.log(user);
+        
         
     }
 })
@@ -34,6 +35,7 @@ btn.addEventListener('click',async (e) => {
 window.addEventListener('load',async () => {
     const res= await fetch('http://localhost:3000/users')
     const users= await res.json();
+     h1.innerHTML+=users.length
     users.forEach(u => {
         userContainer.innerHTML+=`
                 <div class="user">
