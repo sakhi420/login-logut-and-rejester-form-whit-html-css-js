@@ -8,20 +8,27 @@ const userContainer= document.querySelector('.userContainer')
 
 btn.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:3000/users',{
-        method : 'POST',
-        body : JSON.stringify({
-            name : Name.value,
-            lsastName: lastName.value,
-            ege : age.value
-        }),
-        headers :{
-            'Cantent-Type' : 'application/json'
-        }
-    })
-    const user = await res.json()
-    console.log(user);
-    
+    if(Name.value==''||lastName.value==''||age.value==''){
+        alert('لطفا تمام فیلد ها را پر کنید')
+        return;
+
+    }else{
+
+        const res = await fetch('http://localhost:3000/users',{
+            method : 'POST',
+            body : JSON.stringify({
+                name : Name.value,
+                lsastName: lastName.value,
+                ege : age.value
+            }),
+            headers :{
+                'Cantent-Type' : 'application/json'
+            }
+        })
+        const user = await res.json()
+        console.log(user);
+        
+    }
 })
 
 window.addEventListener('load',async () => {
