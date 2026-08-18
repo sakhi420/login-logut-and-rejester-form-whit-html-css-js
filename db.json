@@ -1,4 +1,17 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "nisar",
+      "lsastName": "ahmadi",
+      "ege": "22",
+      "id": "ljrpQz-LHJE"
+    },
+    {
+      "name": "hasan",
+      "lsastName": "hasani",
+      "ege": "2",
+      "id": "fE9vzmB7WIw"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
