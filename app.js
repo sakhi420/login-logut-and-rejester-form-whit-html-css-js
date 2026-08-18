@@ -5,6 +5,8 @@ const age = document.getElementById('age')
 const btn =document.getElementById('btn')
 const userContainer= document.querySelector('.userContainer')
 let h1= document.querySelector('h1')
+
+
  lucide.createIcons();
 
 btn.addEventListener('click',async (e) => {
@@ -43,10 +45,23 @@ window.addEventListener('load',async () => {
             <p><b>Name : ${u.name}</b></p>
             <p><b>Last Name : ${u.lsastName}</b></p>
             <p><b>age : ${u.ege}</b></p>
-             <button class="delete">delete</button>
+             <button class="delete" onclick="deletUserBuId('${u.id}')">delete</button>
         </div>
         `
         
         
     });
 })
+async function deletUserBuId(id) {
+   let ok= confirm( `آیا میخواهید کاربر حذف شود `)
+    if(ok){
+
+        const res= await fetch(`http://localhost:3000/users/${id}`, {method:"DELETE"})
+        const result = await res.json()
+        alert('کاربر با موفقعیت حذف شد')
+        return;
+    }
+    
+    
+    
+}
