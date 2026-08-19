@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغییر رمز عبور</title>
+    <link rel="stylesheet" href="styles/changePass.css">
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-header">
+            <i data-lucide="key-round" class="main-icon"></i>
+            <h2>تغییر رمز عبور</h2>
+            <p>لطفاً اطلاعات زیر را برای بروزرسانی رمز عبور وارد کنید</p>
+        </div>
+
+        <form id="change-password-form">
+            <div class="input-group">
+                <i data-lucide="mail" class="input-icon"></i>
+                <input type="email" id="email" placeholder="ایمیل حساب کاربری" required>
+            </div>
+
+            <div class="input-group">
+                <i data-lucide="lock" class="input-icon"></i>
+                <input type="password" id="current-password" placeholder="رمز عبور فعلی" required>
+            </div>
+
+            <div class="input-group">
+                <i data-lucide="shield-check" class="input-icon"></i>
+                <input type="password" id="new-password" placeholder="رمز عبور جدید" required>
+            </div>
+
+            <button type="submit" id="login-btn">بروزرسانی رمز عبور</button>
+        </form>
+
+        <div class="login-footer">
+            <p>منصرف شدید؟ <a href="profile.html">بازگشت به پروفایل</a></p>
+        </div>
+    </div>
+
+    <script src="../node_modules/lucide/dist/umd/lucide.min.js"></script>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    
+    <script>
+        lucide.createIcons();
+        </script>
+        <script src="js/changePass.js"></script>
+</body>
+</html>

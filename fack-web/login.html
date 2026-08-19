@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به حساب کاربری</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-header">
+            <i data-lucide="lock" class="main-icon"></i>
+            <h2>خوش آمدید</h2>
+            <p>لطفاً وارد حساب کاربری خود شوید</p>
+        </div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <i data-lucide="mail" class="input-icon"></i>
+                <input type="email" id="email" placeholder="ایمیل یا نام کاربری" required>
+            </div>
+
+            <div class="input-group">
+                <i data-lucide="key-round" class="input-icon"></i>
+                <input type="password" id="password" placeholder="رمز عبور" required>
+            </div>
+
+            <button type="submit" id="login-btn">ورود به سیستم</button>
+        </form>
+
+        <div class="login-footer">
+            <p>حساب کاربری ندارید؟ <a href="register.html">ثبت نام کنید</a></p>
+        </div>
+    </div>
+
+    <script src="../node_modules/lucide/dist/umd/lucide.min.js"></script>
+    <!-- کتابخانه سوییت‌الرت -->
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    
+    <script src="js/login.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

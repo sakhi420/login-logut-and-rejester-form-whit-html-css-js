@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل کاربری</title>
+    <link rel="stylesheet" href="styles/prpfile.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="avatar-wrapper">
+                <i data-lucide="user" class="avatar-icon"></i>
+            </div>
+            <h2 id="profile-name">بارگذاری...</h2>
+            <span id="profile-role" class="badge"></span>
+        </div>
+
+        <div class="profile-body">
+            <div class="info-item">
+                <div class="info-label">
+                    <i data-lucide="users"></i>
+                    <span>نام خانوادگی:</span>
+                </div>
+                <div class="info-value" id="LastName">---</div>
+            </div>
+
+
+                        <div class="info-item">
+                <div class="info-label">
+                    <i data-lucide="CakeSlice"></i>
+                    <span>سن :</span>
+                </div>
+                <div class="info-value" id="profile-age">---</div>
+            </div>
+
+
+
+
+            <div class="info-item">
+                <div class="info-label">
+                    <i data-lucide="mail"></i>
+                    <span>ایمیل:</span>
+                </div>
+                <div class="info-value" id="profile-email">---</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">
+                    <i data-lucide="shield-check"></i>
+                    <span>شناسه کاربری (ID):</span>
+                </div>
+                <div class="info-value" id="profile-id">---</div>
+            </div>
+        </div>
+
+        
+        <div class="profile-footer">
+            <button id="ChangePass">
+                <i data-lucide="edit-2"></i>
+                <span>تغیر رمز </span>
+            </button>
+        </div>
+        <div class="profile-footer">
+            <button id="logout-btn">
+                <i data-lucide="log-out"></i>
+                <span>خروج از حساب</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="../node_modules/lucide/dist/umd/lucide.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script>lucide.createIcons();</script>
+    
+   
+</body>
+</html>

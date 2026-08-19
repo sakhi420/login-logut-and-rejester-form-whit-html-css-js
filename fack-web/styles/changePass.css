@@ -1,0 +1,139 @@
+/* تنظیمات عمومی کاملاً همسان با صفحات لاگین و ثبت‌نام روشن */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9; /* پس‌زمینه لایت و روشن */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background: #ffffff; /* باکس سفید رنگ مانند لاگین */
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* سایه نرم سفید */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.login-header {
+    text-align: center;
+}
+
+.login-header .main-icon {
+    width: 50px;
+    height: 50px;
+    color: #2563eb; /* آبی لوسید */
+    background-color: rgba(37, 99, 235, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.login-header h2 {
+    font-size: 22px;
+    color: #1e293b; /* رنگ زغالی تیره متون */
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ساختار باکسِ اینپوت همراه با آیکون درون آن */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group .input-icon {
+    position: absolute;
+    right: 14px; /* قرارگیری آیکون در سمت راست برای زبان فارسی */
+    color: #94a3b8;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 45px 14px 16px; /* فضای خالی از راست تا متن روی آیکون نرود */
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+    text-align: right;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* تغییر رنگ آیکون هنگام فوکوس روی اینپوت */
+.input-group input:focus + .input-icon {
+    color: #2563eb;
+}
+
+/* استایل دکمه ارسال فرم */
+#login-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+#login-btn:hover {
+    background-color: #1d4ed8;
+}
+
+#login-btn:active {
+    transform: scale(0.98);
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.login-footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

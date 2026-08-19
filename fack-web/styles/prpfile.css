@@ -1,0 +1,173 @@
+/* تنظیمات عمومی */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9; /* پس‌زمینه لایت زغالی ملایم */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* کانتینر اصلی کارت پروفایل */
+.profile-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* برای تمیز ماندن لبه‌های گرد کارت */
+    display: flex;
+    flex-direction: column;
+}
+
+/* بخش بالایی پروفایل */
+.profile-header {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); /* گرادینت ملایم آبی */
+    padding: 40px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* دایره دور آیکون پروفایل */
+.avatar-wrapper {
+    background: #ffffff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    margin-bottom: 15px;
+    border: 3px solid #2563eb;
+}
+
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+    color: #2563eb;
+}
+
+.profile-header h2 {
+    font-size: 22px;
+    color: #1e293b;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+/* نشان یا بج وضعیت کاربر */
+.badge {
+    background-color: #64748b;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.admin-badge {
+    background-color: #10b981; /* سبز برای ادمین */
+}
+
+/* بخش بدنه و فیلدهای اطلاعات */
+.profile-body {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+    border-bottom: none; /* حذف خط زیرین برای آخرین آیتم */
+}
+
+.info-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.info-label svg {
+    width: 18px;
+    height: 18px;
+    color: #94a3b8;
+}
+
+.info-value {
+    color: #334155;
+    font-weight: 600;
+    font-size: 15px;
+    direction: ltr; /* نمایش درست ایمیل و آی‌دی کامپیوتری چپ‌چین */
+}
+
+/* بخش دکمه خروج در پایین کارت */
+.profile-footer {
+    padding: 0 24px 30px 24px;
+}
+
+#logout-btn,#ChangePass {
+    width: 100%;
+    background-color: #fee2e2; /* قرمز لایت برای حس خروج امن */
+    color: #ef4444;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+#logout-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+#logout-btn:hover {
+    background-color: #fca5a5;
+    color: #b91c1c;
+}
+
+#logout-btn:active {
+    transform: scale(0.98);
+}
+
+
+#ChangePass svg {
+    width: 18px;
+    height: 18px;
+}
+
+#ChangePass:hover {
+    background-color: #fca5a5;
+    color: #b91c1c;
+}
+
+#ChangePass:active {
+    transform: scale(0.98);
+}
+
