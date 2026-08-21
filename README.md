@@ -1,52 +1,59 @@
-# login-logut-and-rejester-form-whit-html-css-js
-# 👥 Full-Stack User Management System & Admin Dashboard
+# سیستم ورود/خروج و فرم ثبت‌نام (Vanilla HTML/CSS/JS)
 
-A robust, lightweight Client-Server CRUD application built using **Pure Vanilla JavaScript (ES6+)**, semantic HTML5, and responsive CSS3 Grid/Flexbox architecture. This project showcases dynamic asynchronous rendering, local session handling, and structural data manipulation via a mock REST API backend.
+یک پروژه آموزشی و دمو برای مدیریت کاربران (ورود، ثبت‌نام، پروفایل، داشبورد ادمین) که با HTML5، CSS3 و جاوااسکریپت خالص ساخته شده و از json-server برای شبیه‌سازی REST API استفاده می‌کند.
 
-## 🚀 Core Features
+## ویژگی‌ها
+- ورود و ثبت‌نام ساده (فرانت‌اند)
+- ذخیره‌سازی وضعیت کاربر در localStorage
+- عملیات CRUD کامل روی کاربران با استفاده از fetch (GET/POST/PATCH/DELETE)
+- داشبورد ادمین برای مشاهده آمار و ویرایش کاربران
+- استفاده از آیکن‌های Lucide و نمایش پیام‌ها با SweetAlert2
 
-- **Complete Asynchronous CRUD:** Full integration of HTTP methods (`GET`, `POST`, `PATCH`, `DELETE`) to handle user data pipelines synchronously without browser latency.
-- **Secure Authentication Flow:** Client-side login and registration systems powered by `localStorage` session caching and query parameter routing hooks.
-- **Advanced Administrative Panels:** Live data calculations including real-time dashboard metrics (Total Users, Admin headcounts, and floor-clipped average age calculations).
-- **In-DOM Dynamic Modals:** Replaced standard system prompts with customized CSS animated modal overlays for editing profiles smoothly.
-- **Modern Local UI Components:** Seamless integration of localized vector rendering with `Lucide Icons` and active notification feedback via `SweetAlert2`.
+## نیازمندی‌ها
+- Node.js (برای اجرای json-server) یا نصب محلی json-server
+- مرورگر مدرن با پشتیبانی از fetch و ES6+
 
-## 🛠️ Technical Arsenal
+## نصب و اجرا
+1. ریپو را کلون کنید:
+```bash
+git clone https://github.com/sakhi420/login-logut-and-rejester-form-whit-html-css-js.git
+cd login-logut-and-rejester-form-whit-html-css-js/fack-web
+```
 
-- **Frontend:** Vanilla JavaScript, HTML5, CSS3 Grid & Flexbox
-- **Database Simulation:** JSON Server (Node.js REST API mockup ecosystem)
-- **Embedded UI Tools:** Lucide Icons (UMD distribution), SweetAlert2 Components
+2. (اختیاری) وابستگی‌ها را نصب کنید:
+```bash
+npm install
+```
+اگر json-server در دستگاه شما نصب نیست:
+```bash
+npm install -g json-server
+```
 
-## 🧠 Engineering Challenges & Architecture Solutions
+3. json-server را اجرا کنید:
+```bash
+json-server --watch db.json
+```
+این سرور معمولاً روی http://localhost:3000 بالا می‌آید.
 
-### The Asynchronous Icon Rendering Race Condition
-**Challenge:** When database items were injected dynamically into the DOM via `fetch` loops, the browser failed to render icon vectors because the initial `lucide.createIcons()` script had already resolved during the payload setup.
-**Solution:** Decoupled the lifecycle hook execution by triggering `lucide.createIcons()` immediately after the `.forEach` string literal mapping finished appending rows to the DOM.
+4. یکی از صفحات را در مرورگر باز کنید:
+- `fack-web/login.html`
+- `fack-web/register.html`
+- `fack-web/admin.html`
 
-### Data Mutation Preservation via PATCH vs PUT
-**Challenge:** Standard `PUT` requests rewrote or erased adjacent data matrices in `db.json` when modifying single data fragments like passwords or roles.
-**Solution:** Transitioned the pipeline scope exclusively to targeted **`PATCH`** payloads, isolating specific object properties and safeguarding non-mutated data attributes.
+نکته: فایل‌های HTML الان منابعی مانند `../node_modules/lucide/...` و `../node_modules/sweetalert2/...` را بارگذاری می‌کنند. اگر node_modules نصب نشده، یا آن‌ها را نصب کنید یا لینک CDN جایگزین بگذارید.
 
-## 🔧 Installation & Local Setup
+## ساختار پروژه
+- fack-web/ — همه فایل‌های فرانت‌اند و نمونه DB
+  - js/ — اسکریپت‌های صفحه به‌صورت جدا (login.js, register.js, profile.js, admin.js, changePass.js)
+  - styles/ — CSS صفحه‌ای (login.css, register.css, prpfile.css, admin.css, changePass.css)
+  - db.json — نمونه داده‌ها برای json-server
+  - login.html, register.html, profile.html, admin.html, changePass.html
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/sakhi420/login-logut-and-rejester-form-whit-html-css-js.git
-   cd fack-web
-   ```
+## نکات فنی و پیشنهادات
+- تغییرات روی کاربر با PATCH ارسال می‌شوند تا سایر فیلدها پاک نشوند.
+- اگر می‌خواهید پروژه در محیط تولیدی استفاده شود، باید احراز هویت سمت سرور و ذخیره امن پسورد (hashing) را اضافه کنید.
+- برای توسعه سریع‌تر، می‌توان یک اسکریپت npm برای اجرای همزمان json-server و یک static server اضافه کرد.
 
-2. **Initialize Offline Package Ecosystem:**
-   ```bash
-   npm install
-   ```
-
-3. **Boot Up the Database Engine:**
-   ```bash
-   json-server --watch db.json
-   ```
-
-4. **Launch Application:**
-   Open `login.html` via your local web browser proxy.
-
----
-👨‍💻 Developed by **Nisar Ahmad Sakhi Nizhad** - Computer Science Student.
+## درباره
+توسعه‌دهنده: Nisar Ahmad Sakhi Nizhad
+این پروژه برای هدف آموزشی و نمونه‌سازی ساخته شده است.
