@@ -31,7 +31,7 @@ A robust, lightweight Client-Server CRUD application built using **Pure Vanilla 
 
 1. **Clone the Repository:**
    ```bash
-   git clone 
+   git clone https://github.com/sakhi420/login-logut-and-rejester-form-whit-html-css-js.git
    cd fack-web
    ```
 
